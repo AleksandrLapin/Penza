@@ -1,5 +1,6 @@
 body {
     width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Fira Sans', 'Roboto', sans-serif;
@@ -32,7 +33,7 @@ body {
 }
 
 .logo_box span {
-    width: 85px;
+    width: auto;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: bold;
@@ -93,6 +94,7 @@ body {
     line-height: 24px;
     opacity: 0.6;
     cursor: pointer;
+    width: 100%;
 }
 
 .button_reg:hover {
@@ -104,7 +106,7 @@ body {
     width: 40px;
     height: 40px;
     background: none;
-    background-image: url(./assets/images/user_icon.svg);
+    background: url(./assets/images/user_icon.svg) no-repeat;
 }
 
 .button_volunteer {
@@ -167,14 +169,18 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1260px;
     height: auto;
     margin: 0 auto;
 }
 
+.footer_container img {
+    margin-left: 10px;
+}
+
 .footer_wrapper {
     flex-grow: 2;
-    margin-left: 78px;
+    margin: 0 10px 0 78px;
 }
 
 .footer_menu_wrapper {
@@ -197,7 +203,6 @@ body {
     color: #fff;
     font-size: 20px;
     font-weight: 500;
-    line-height: 70px;
     padding: 10px;
     cursor: pointer;
 }
@@ -244,10 +249,11 @@ body {
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
+    max-width: 800px;
     border-top: 1px solid #979797;
     border-bottom: 1px solid #979797;
     padding: 0;
-    margin: 0;
+    margin: 28px 0 32px 0;
 }
 
 .footer_menu li {
@@ -275,3 +281,60 @@ body {
     opacity: 0.5;
 }
 
+@media (max-width: 767px) {
+    .header_menu {
+        display: none;
+    }
+    .logo {
+        width: 68px;
+        height: 45px;
+    }
+    .button_reg {
+        display: none;
+    }
+    .button_icon {
+        width: 30px;
+        height: 30px;
+        background-size: 30px 30px;
+        margin-right: 15px;
+    }
+    .button_volunteer {
+        display: none;
+    }
+    .reg_box {
+        border-left: none;
+    }
+    .header {
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .footer_head_menu {
+        display: none;
+    }
+    .footer_menu {
+        display: none;
+    }
+    .footer_logo {
+        height: 90px;
+    }
+    .footer {
+        min-height: 140px;
+    }
+    .footer_wrapper {
+        margin-left: 10px;
+    }
+    .footer_menu_wrapper {
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+    .right {
+        flex-wrap: wrap;
+    }
+    .ok,
+    .insta,
+    .fb,
+    .vk,
+    .ytube {
+        margin-left: 0;
+        margin-right: 18px;
+    }
+}
