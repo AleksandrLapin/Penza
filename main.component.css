@@ -392,7 +392,7 @@ body {
     .footer_logo {
         width: 65px;
         height: 90px;
-        margin: 0 20px 0 10px;
+        margin: 0 10px 0 10px;
     }
     .footer_wrapper {
         margin: 0;
@@ -406,6 +406,7 @@ body {
     .right {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        padding-right: 5px;
     }
     .ok,
     .insta,
