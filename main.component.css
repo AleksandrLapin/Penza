@@ -41,7 +41,7 @@ body {
     align-items: center;
 }
 
-.logo_box img {
+.logo {
     margin: 13px 40px 13px 16px;
 }
 
@@ -352,12 +352,18 @@ body {
 }
 
 @media (max-width: 767px) {
+    .header {
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        position: fixed;
+    }
     .header_menu {
         display: none;
     }
     .logo {
         width: 68px;
         height: 45px;
+        margin-right: 15px;
     }
     .button_reg {
         display: none;
@@ -373,12 +379,6 @@ body {
     }
     .reg_box {
         border-left: none;
-    }
-    .header {
-        -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        /*-webkit-box-sizing: border-box;
-        box-sizing: border-box;*/
     }
     .footer {
         min-height: 140px;
