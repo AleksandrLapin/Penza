@@ -19,6 +19,7 @@ body {
     max-width: 1280px;
     height: auto;
     margin: 0 auto;
+    z-index: 3;
 }
 
 .header_wrapper {
@@ -40,6 +41,7 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    z-index: 4;
 }
 
 .logo {
@@ -357,6 +359,9 @@ body {
 }
 
 @media (max-width: 767px) {
+    body.lock {
+        overflow: hidden;
+    }
     .header {
         -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
         box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -364,7 +369,28 @@ body {
         z-index: 50;
     }
     .header_menu {
-        display: none;
+        display: block;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: #fff;
+        z-index: 1;
+        transition: all 0.3s ease 0s;
+    }
+    .header_menu.active {
+        top: 0;
+    }
+    .header_menu ul {
+        border: none;
+        display: block;
+        margin-top: 80px;
+    }
+    .header_menu li {
+        font-size: 22px;
+        padding: 15px;
     }
     .logo {
         width: 68px;
@@ -375,17 +401,15 @@ body {
         display: none;
     }
     .button_icon {
-        width: 30px;
-        height: 30px;
-        background-size: 30px 30px;
-        margin-right: 15px;
+        display: none;
     }
     .button_burger {
         display: block;
         position: relative;
-        width: 30px;
-        height: 24px;
+        width: 25px;
+        height: 20px;
         margin-right: 20px;
+        z-index: 2;
     }
     .button_burger:before,
     .button_burger:after {
@@ -396,6 +420,7 @@ body {
         width: 100%;
         height: 2px;
         left: 0;
+        transition: all 0.2s ease 0s;
     }
     .button_burger:before {
         top: 0;
@@ -409,7 +434,19 @@ body {
         opacity: 0.6;
         width: 100%;
         height: 2px;
-        top: 11px;
+        top: 9px;
+        transition: all 0.2s ease 0s;
+    }
+    .button_burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .button_burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .button_burger.active span {
+        transform: scale(0);
     }
     .button_volunteer {
         display: none;
