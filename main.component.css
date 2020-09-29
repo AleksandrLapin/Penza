@@ -19,7 +19,6 @@ body {
     max-width: 1280px;
     height: auto;
     margin: 0 auto;
-    z-index: 3;
 }
 
 .header_wrapper {
@@ -41,7 +40,6 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    z-index: 4;
 }
 
 .logo {
@@ -128,7 +126,7 @@ body {
     font-weight: bold;
     font-size: 16px;
     line-height: 24px;
-    opacity: 0.6;
+    opacity: 0.7;
     cursor: pointer;
 }
 
@@ -144,6 +142,7 @@ body {
     background: url(./assets/images/user_icon.svg) no-repeat;
 }
 
+.burger_wrapper,
 .button_burger {
     display: none;
 }
@@ -363,10 +362,8 @@ body {
         overflow: hidden;
     }
     .header {
-        -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        
         position: fixed;
-        z-index: 50;
     }
     .header_menu {
         display: block;
@@ -377,7 +374,7 @@ body {
         height: 100%;
         overflow: auto;
         background-color: #fff;
-        z-index: 1;
+        z-index: 2;
         transition: all 0.3s ease 0s;
     }
     .header_menu.active {
@@ -386,11 +383,17 @@ body {
     .header_menu ul {
         border: none;
         display: block;
-        margin-top: 80px;
+        margin-top: 125px;
     }
     .header_menu li {
-        font-size: 22px;
-        padding: 15px;
+        font-size: 20px;
+        padding: 12px 15px;
+    }
+    .logo_box {
+        background-color: #fff;
+        -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.4);
+        box-shadow: 0 0 8px rgba(0,0,0,0.4);
+        z-index: 4;
     }
     .logo {
         width: 68px;
@@ -398,10 +401,20 @@ body {
         margin-right: 15px;
     }
     .button_reg {
-        display: none;
+        font-size: 20px;
+        font-weight: normal;
     }
     .button_icon {
-        display: none;
+        margin-right: 15px;
+        
+    }
+    .burger_wrapper {
+        display: block;
+        position: absolute;
+        width: 25px;
+        height: 20px;
+        top: 25px;
+        right: 20px;
     }
     .button_burger {
         display: block;
@@ -409,7 +422,7 @@ body {
         width: 25px;
         height: 20px;
         margin-right: 20px;
-        z-index: 2;
+        z-index: 5;
     }
     .button_burger:before,
     .button_burger:after {
@@ -453,9 +466,27 @@ body {
     }
     .reg_box {
         border-left: none;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 125px;
+        padding-top: 85px;
+        padding-left: 15px;
+        overflow: auto;
+        background-color: #fff;
+        z-index: 3;
+        transition: all 0.3s ease 0s;
+    }
+    .reg_box.active {
+        top: 0;
     }
     .footer {
         min-height: 140px;
+        z-index: 1;
     }
     .footer_head_menu {
         display: none;
