@@ -19,6 +19,7 @@ body {
     max-width: 1280px;
     height: auto;
     margin: 0 auto;
+    z-index: 999;
 }
 
 .header_wrapper {
@@ -165,11 +166,7 @@ body {
     background-color: #F15B5B;
 }
 
-/*Main*/
-.main {
-    height: 100%;
-}
- 
+/*Main*/ 
 
 .navigation > li.switch:hover,
 .navigation > li.switch.active {
@@ -190,20 +187,95 @@ body {
     max-width: 1280px;
     height: auto;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-
 }
 
-.main_item {
-    width: 45%;
+.article {
+    position: relative;
+    width: auto;
     height: auto;
-    padding: 15px;
-    border: 1px solid gray;
-    border-radius: 15px;
-    margin-top: 15px;
+    min-height: 189px;
+    margin: 15px;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+}
+
+.article_header {
+    font-size: 22px;
+    font-weight: 600;
+    color: #212121;
+    padding: 23px 170px 23px 23px;
+    margin: 0;
+}
+
+.article_paragraph {
+    font-size: 16px;
+    font-weight: 400;
+    color: #212121;
+    padding: 0 170px 0 23px;
+    margin: 0;
+}
+
+.article_footer {
+    display: flex;
+    padding: 0 170px 0 23px;
+    margin: 0;
+}
+
+.article_footer p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #212121;
+    opacity: 0.5;
+    padding-right: 50px;
+}
+
+.article_social {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.article_fb,
+.article_vk,
+.article_insta {
+    width: 24px;
+    height: 24px;
+    padding: 0 5px;
+    background-repeat: no-repeat;
+}
+
+.article_fb {
+    background-image: url(./assets/images/art_fb.svg);
+}
+
+.article_vk {
+    background-image: url(./assets/images/art_vk.svg);
+}
+
+.article_insta {
+    background-image: url(./assets/images/art_ig.svg);
+}
+
+.button_article {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 120px;
+    height: 32px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #237420;
+}
+
+.article_points {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    font-size: 16px;
+    color: #E34A2B;
 }
 
 /* Footer */
@@ -378,6 +450,11 @@ body {
     body.lock {
         overflow: hidden;
     }
+     body {
+        margin-top: 85px;
+    }
+
+    /* Header */
     .header {
         position: fixed;
         top: 0;
@@ -391,7 +468,7 @@ body {
         height: 100%;
         overflow: auto;
         background-color: #fff;
-        z-index: 2;
+        z-index: 20;
         transition: all 0.3s ease 0s;
     }
     .header_menu.active {
@@ -410,7 +487,7 @@ body {
         background-color: #fff;
         -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.4);
         box-shadow: 0 0 8px rgba(0,0,0,0.4);
-        z-index: 4;
+        z-index: 40;
     }
     .logo {
         width: 68px;
@@ -442,7 +519,7 @@ body {
         width: 25px;
         height: 20px;
         margin-right: 20px;
-        z-index: 5;
+        z-index: 50;
     }
     .button_burger:before,
     .button_burger:after {
@@ -499,7 +576,7 @@ body {
         padding-left: 15px;
         overflow: auto;
         background-color: #fff;
-        z-index: 3;
+        z-index: 30;
         transition: all 0.3s ease 0s;
     }
     .reg_box.active {
@@ -508,11 +585,38 @@ body {
 
     /* Main */
 
-    .main {
-        margin-top: 71px;
+    .article {
+        padding-bottom: 80px;
     }
-    .main_item {
-        width: 85%;
+    .article_header {
+        font-size: 18px;
+        padding: 15px 15px 0 15px;
+    }
+    .article_paragraph {
+        padding: 15px 15px 0 15px;
+    }
+    .article_footer {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .article_footer p {
+        padding: 0 10px 10px 0;
+        margin: 0;
+    }
+    .article_points {
+        bottom: 62px;
+    }
+    .article_social {
+        position: absolute;
+        left: 10px;
+        bottom: 62px;
+    }
+    .button_article {
+        left: 50%;
+        margin-left: -60px;
+        bottom: 15px;
+        top: auto;
+        right: auto;
     }
 
     /* Footer */
