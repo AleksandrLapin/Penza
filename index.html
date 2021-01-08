@@ -8,7 +8,8 @@
         <link rel="stylesheet" href="main.component.css">
     </head>
     <body>
-        <header class="header">
+        <div class="page">
+            <header class="header">
             <div class="header_wrapper">
                 <div class="logo_box">
                     <img class="logo" src="assets/images/logo.svg" width="97" height="64" alt="Мой город">
@@ -40,44 +41,15 @@
                     <button type="button" class="button_icon"></button>
                 </div>
                 <button type="button" class="button_volunteer">стать волонтером</button>
-                    <!-- <button pButton pRipple type="button" icon="pi pi-user-plus"
-                        class="p-button-rounded p-button-success p-button-outlined button_style"
-                        (click)="showRegisterModel()">
-                    </button>
-                    <button pButton pRipple type="button" icon="pi pi-sign-in"
-                        class="p-button-rounded p-button-success p-button-outlined button_style"
-                        (click)="showRegisterModel()">
-                    </button>
-                    <button pButton pRipple type="button" icon="pi pi-sign-out"
-                        class="p-button-rounded p-button-success p-button-outlined button_style">
-                    </button> -->
             </div>
             <div class="burger_wrapper">
                 <button type="button" class="button_burger">
                     <span></span>
                 </button>
             </div>
-        </header>
-        <main class="main">
-            <div>
-            <article class="article">
-                <h2 class="article_header">Дополнение закона о покое и тишине дворов населения Пензенской области</h2>
-                <p class="article_paragraph">Жители Пензы провели голосование на изменение маршрута №12. Причиной данной инициативы послужили недовольства граждан на излишнюю трату времени на передвижение по городу. По словам инициатора : «каждая минута, потраченная в пробке стоит слишком дорого!</p>
-                <div class="article_footer">
-                    <p>06.10.2020</p>
-                    <div class="article_social">
-                        <a class="article_fb" href="#" aria-label="Фейсбук"></a>
-                        <a class="article_vk" href="#" aria-label="Вконтакте"></a>
-                        <a class="article_insta" href="#" aria-label="Инстаграм"></a>
-                    </div>
-                    <p>Инициатор: Иванов И.И.</p>
-                    <p>Транспорт</p>
-                </div> 
-                <button class="button_article">Поддержать</button>
-                <span class="article_points">+3 балла</span>
-            </article>
-            </div>
-            <article class="article">
+            </header>
+            <main class="main">
+            <!-- <article class="article">
                 <h2 class="article_header">Дополнение закона о покое и тишине дворов населения Пензенской области</h2>
                 <p class="article_paragraph">Жители Пензы провели голосование на изменение маршрута №12. Причиной данной инициативы послужили недовольства граждан на излишнюю трату времени на передвижение по городу. По словам инициатора : «каждая минута, потраченная в пробке стоит слишком дорого!</p>
                 <div class="article_footer">
@@ -108,9 +80,25 @@
                 </div> 
                 <button class="button_article">Поддержать</button>
                 <span class="article_points">+3 балла</span>
+            </article> -->
+            <article class="article">
+                <h2 class="article_header">Дополнение закона о покое и тишине дворов населения Пензенской области</h2>
+                <p class="article_paragraph">Жители Пензы провели голосование на изменение маршрута №12. Причиной данной инициативы послужили недовольства граждан на излишнюю трату времени на передвижение по городу. По словам инициатора : «каждая минута, потраченная в пробке стоит слишком дорого!</p>
+                <div class="article_footer">
+                    <p>06.10.2020</p>
+                    <div class="article_social">
+                        <a class="article_fb" href="#" aria-label="Фейсбук"></a>
+                        <a class="article_vk" href="#" aria-label="Вконтакте"></a>
+                        <a class="article_insta" href="#" aria-label="Инстаграм"></a>
+                    </div>
+                    <p>Инициатор: Иванов И.И.</p>
+                    <p>Транспорт</p>
+                </div> 
+                <button class="button_article">Поддержать</button>
+                <span class="article_points">+3 балла</span>
             </article>
-        </main>
-        <footer class="footer">
+            </main>
+            <footer class="footer">
             <div class="footer_container">
                 <img class="footer_logo" src="assets/images/logo-vertical.svg" width="109" height="150" alt="Мой город" />
                 <div class="footer_wrapper">
@@ -161,7 +149,8 @@
                     </div>
                 </div>
             </div> 
-        </footer>
+            </footer>
+        </div>
         <script src="js/jquery-3.5.1.min.js" type="text/javascript"></script>
         <script src="js/script.js" type="text/javascript"></script>
         <app-registration [regModalVisible]="regModalVisible" (visibleChange)="response($event)"></app-registration>
